@@ -1,5 +1,22 @@
 <!DOCTYPE HTML>
 <html>
+<script>
+function GO() {
+ alert('Congratulations')}
+
+function isEmail() {
+    var str = document.getElementById("email").value;
+    var status = document.getElementById("status");
+    var re = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
+    if (re.test(str)) status = (GO());
+      else status.innerHTML = "wrong email";
+    if(isEmpty(str)) status.innerHTML = "empty";
+   }
+   function isEmpty(str){
+    return (str == null) || (str.length == 0);
+   }
+ </script>
+
 <title> Hello GitHub </title>
 <head>
   <!-- Тег meta для указания кодировки -->
@@ -9,6 +26,12 @@
 
 <body>
  <p> My first page on GitHub </p>
+
+    <p>Write your email and push button &laquo;Check&raquo;</p>
+   <p><input type="text" id="email"> <span id="status"></span></p>
+   <p><input type="button" value="Check" onclick="isEmail()"></p>
+
+ 
 
 
 </body>
